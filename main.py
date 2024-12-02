@@ -1,7 +1,7 @@
 import importlib
 
-day = None
-part = None
+day = 2
+part = 2
 
 def get_user_input():
     try:
