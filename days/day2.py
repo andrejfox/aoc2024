@@ -1,5 +1,6 @@
 from util import read_file
 
+
 def part1():
     input_list = read_file()
     reports = [[int(num) for num in line.split()] for line in input_list]
@@ -9,6 +10,7 @@ def part1():
         if safety_check(report): counter += 1
 
     return counter
+
 
 def safety_check(arr):
     increasing = arr[0] < arr[1]
@@ -20,6 +22,7 @@ def safety_check(arr):
             return False
     return True
 
+
 def part2():
     input_list = read_file()
     reports = [[int(num) for num in line.split()] for line in input_list]
@@ -30,6 +33,7 @@ def part2():
 
     return counter
 
+
 def unsafer_safety_check(arr):
     increasing = arr[0] < arr[1]
     for i in range(1, len(arr)):
@@ -39,6 +43,7 @@ def unsafer_safety_check(arr):
         if (arr[i - 1] < arr[i]) ^ increasing:
             return try_without_one(arr)
     return True
+
 
 def try_without_one(arr):
     for i in range(len(arr)):

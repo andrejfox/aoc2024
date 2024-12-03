@@ -1,6 +1,6 @@
 import importlib
 
-day = 2
+day = 3
 part = 2
 
 def get_user_input():
