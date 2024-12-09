@@ -1,7 +1,8 @@
 import importlib
+import traceback
 
-day = None
-part = None
+day = 6
+part = 2
 
 def get_user_input():
     try:
@@ -34,6 +35,7 @@ def execute_day_method(day, part):
         print(f"Module for day {day} not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
+        traceback.print_exc()
 
 if __name__ == "__main__":
     if day is None or part is None:
