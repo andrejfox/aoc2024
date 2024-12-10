@@ -1,8 +1,8 @@
 import importlib
 import traceback
 
-day = 6
-part = 2
+day = None
+part = None
 
 def get_user_input():
     try:
